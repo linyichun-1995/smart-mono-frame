@@ -8,6 +8,9 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@latest",
+
+
+
   "devDependencies": {
     "@types/node": "^22.14.1",
     "@vitejs/plugin-vue": "^5.2.3",
@@ -32,8 +35,8 @@
       "prettier --write"
     ],
     "*.{js,ts,vue}": [
-      "eslint",
-      "prettier --check"
+      "eslint --fix",
+      "prettier --write"
     ],
     "package.json": [
       "prettier --write"
