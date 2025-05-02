@@ -1,10 +1,10 @@
-import eslint from "@eslint/js"
-import eslintConfigPrettier from "eslint-config-prettier/flat"
-import prettierPlugin from "eslint-plugin-prettier"
-import eslintPluginVue from "eslint-plugin-vue"
-import globals from "globals"
-import typescriptEslint from "typescript-eslint"
-import vueParser from "vue-eslint-parser"
+import eslint from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+import prettierPlugin from "eslint-plugin-prettier";
+import eslintPluginVue from "eslint-plugin-vue";
+import globals from "globals";
+import typescriptEslint from "typescript-eslint";
+import vueParser from "vue-eslint-parser";
 
 export default typescriptEslint.config(
   { ignores: ["**/node_modules/", "**/dist/", "**/build/", "**/coverage/"] },
@@ -28,10 +28,10 @@ export default typescriptEslint.config(
       prettier: prettierPlugin,
     },
     rules: {
-      "prettier/prettier":  "error",
+      "prettier/prettier": "error",
       "@typescript-eslint/no-explicit-any": "off",
       // your rules
     },
   },
   eslintConfigPrettier,
-)
+);
