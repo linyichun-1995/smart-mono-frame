@@ -1,0 +1,65 @@
+# 依赖目录
+node_modules
+.pnpm-store
+
+# 构建输出
+dist
+build
+.output
+
+# 日志文件
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 环境变量文件
+.env
+.env.*
+!.env.example
+
+# 编辑器目录和文件
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 测试覆盖率报告
+coverage
+
+# Turbo
+.turbo
+
+# 类型生成文件
+*.tsbuildinfo
+
+# Vite
+.vite-ssg-dist
+.vite-ssg-temp
+
+# Vue
+*.vue.js
+
+# 包管理器锁文件（可选，取决于您的策略）
+# package-lock.json
+# yarn.lock
+# 注意：通常在monorepo中保留pnpm-lock.yaml
+
+# 各包的输出目录
+packages/*/dist
+packages/*/node_modules
+apps/*/dist
+apps/*/node_modules
+
+# 临时文件
+.temp
+.tmp
+.cache
+
+# 本地配置文件
+*.local
