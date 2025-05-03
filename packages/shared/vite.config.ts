@@ -20,6 +20,7 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, "src/index.ts"),
         services: resolve(__dirname, "src/services.ts"),
+        components: resolve(__dirname, "src/components.ts"),
       },
       // 只生成 ES 模块
       formats: ["es"],

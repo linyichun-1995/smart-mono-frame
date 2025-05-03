@@ -5,6 +5,7 @@ import eslintPluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import typescriptEslint from "typescript-eslint";
 import vueParser from "vue-eslint-parser";
+import unocss from "@unocss/eslint-config/flat";
 
 export default typescriptEslint.config(
   { ignores: ["**/node_modules/", "**/dist/", "**/build/", "**/coverage/"] },
