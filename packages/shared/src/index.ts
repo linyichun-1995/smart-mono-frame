@@ -1,6 +1,6 @@
-import type { App } from "vue";
+import type { App } from 'vue';
 
-import * as componentObj from "./components";
+import * as componentObj from './components';
 
 export default {
   install: (app: App) => {

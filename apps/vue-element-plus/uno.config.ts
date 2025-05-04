@@ -1,8 +1,8 @@
-import presetWind4 from "@unocss/preset-wind4";
-import presetAttributify from "@unocss/preset-attributify";
-import { defineConfig } from "unocss";
-import presetIcons from "@unocss/preset-icons";
-import { FileSystemIconLoader } from "unplugin-icons/loaders";
+import presetWind4 from '@unocss/preset-wind4';
+import presetAttributify from '@unocss/preset-attributify';
+import { defineConfig } from 'unocss';
+import presetIcons from '@unocss/preset-icons';
+import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
 export default defineConfig({
   presets: [
@@ -12,19 +12,19 @@ export default defineConfig({
     }),
     presetIcons({
       extraProperties: {
-        width: "1em",
-        height: "1em",
+        width: '1em',
+        height: '1em',
       },
       customizations: {
         customize(props) {
-          props.width = "1em";
-          props.height = "1em";
+          props.width = '1em';
+          props.height = '1em';
 
           return props;
         },
       },
       collections: {
-        "my-yet-other-icons": FileSystemIconLoader("./src/assets"),
+        'my-yet-other-icons': FileSystemIconLoader('./src/assets'),
       },
     }),
   ],

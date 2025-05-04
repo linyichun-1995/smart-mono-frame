@@ -3,7 +3,7 @@ import axios, {
   type AxiosRequestConfig,
   type AxiosResponse,
   type InternalAxiosRequestConfig,
-} from "axios";
+} from 'axios';
 
 /**
  * HTTP请求响应接口
@@ -22,10 +22,10 @@ export default class HttpRequestService {
   private instance: AxiosInstance;
   // 基础配置
   private readonly baseConfig: AxiosRequestConfig = {
-    baseURL: "", // 可以设置API基础URL
+    baseURL: '', // 可以设置API基础URL
     timeout: 10000, // 请求超时时间
     headers: {
-      "Content-Type": "application/json;charset=utf-8",
+      'Content-Type': 'application/json;charset=utf-8',
     },
   };
 
@@ -52,10 +52,10 @@ export default class HttpRequestService {
     this.instance.interceptors.request.use(
       (config: InternalAxiosRequestConfig) => {
         // 在发送请求之前做些什么，例如添加token
-        const token = localStorage.getItem("token");
+        const token = localStorage.getItem('token');
 
         if (token) {
-          config.headers["Authorization"] = `Bearer ${token}`;
+          config.headers['Authorization'] = `Bearer ${token}`;
         }
         return config;
       },
@@ -72,48 +72,48 @@ export default class HttpRequestService {
         const { data } = response;
         // 根据后端接口规范处理响应
         if (data.code !== 200) {
-          return Promise.reject(new Error(data.message || "请求失败"));
+          return Promise.reject(new Error(data.message || '请求失败'));
         }
         return data;
       },
       (error) => {
         // 对响应错误做点什么
-        let message = "";
+        let message = '';
         const status = error.response?.status;
         switch (status) {
           case 400:
-            message = "请求错误";
+            message = '请求错误';
             break;
           case 401:
-            message = "未授权，请重新登录";
+            message = '未授权，请重新登录';
             // 可以在这里处理登出逻辑
             break;
           case 403:
-            message = "拒绝访问";
+            message = '拒绝访问';
             break;
           case 404:
-            message = "请求地址出错";
+            message = '请求地址出错';
             break;
           case 408:
-            message = "请求超时";
+            message = '请求超时';
             break;
           case 500:
-            message = "服务器内部错误";
+            message = '服务器内部错误';
             break;
           case 501:
-            message = "服务未实现";
+            message = '服务未实现';
             break;
           case 502:
-            message = "网关错误";
+            message = '网关错误';
             break;
           case 503:
-            message = "服务不可用";
+            message = '服务不可用';
             break;
           case 504:
-            message = "网关超时";
+            message = '网关超时';
             break;
           default:
-            message = "网络连接异常";
+            message = '网络连接异常';
         }
         return Promise.reject(new Error(message));
       },
@@ -171,10 +171,7 @@ export default class HttpRequestService {
    * @param config 请求配置
    * @returns Promise
    */
-  public delete<T = any>(
-    url: string,
-    config?: AxiosRequestConfig,
-  ): Promise<HttpResponse<T>> {
+  public delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<HttpResponse<T>> {
     return this.instance.delete(url, config);
   }
 
@@ -189,7 +186,7 @@ export default class HttpRequestService {
   public uploadFile<T = any>(
     url: string,
     file: File,
-    filename: string = "file",
+    filename: string = 'file',
     config?: AxiosRequestConfig,
   ): Promise<HttpResponse<T>> {
     const formData = new FormData();
@@ -197,7 +194,7 @@ export default class HttpRequestService {
 
     return this.instance.post(url, formData, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        'Content-Type': 'multipart/form-data',
       },
       ...config,
     });
@@ -210,14 +207,10 @@ export default class HttpRequestService {
    * @param config 请求配置
    * @returns Promise
    */
-  public downloadFile(
-    url: string,
-    params?: any,
-    config?: AxiosRequestConfig,
-  ): Promise<Blob> {
+  public downloadFile(url: string, params?: any, config?: AxiosRequestConfig): Promise<Blob> {
     return this.instance.get(url, {
       params,
-      responseType: "blob",
+      responseType: 'blob',
       ...config,
     });
   }

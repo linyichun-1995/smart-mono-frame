@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HelloWorld } from "@smart/shared/components";
+import { HelloWorld } from '@smart/shared/components';
 </script>
 
 <template>
