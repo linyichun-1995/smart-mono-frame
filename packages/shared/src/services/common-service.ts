@@ -14,7 +14,7 @@ export default class CommonService {
    * @return The boolean result. True means the input is null, undefined or empty string. False means NOT.
    */
   static isNullOrUndefinedOrEmptyString(input: any): boolean {
-    return this.isNullOrUndefined(input) || input === "";
+    return this.isNullOrUndefined(input) || input === '';
   }
 
   /**
@@ -23,6 +23,6 @@ export default class CommonService {
    * @return True means the input is string type and it is not empty.
    */
   static isNotEmptyString(input: any): boolean {
-    return typeof input === "string" && input !== "";
+    return typeof input === 'string' && input !== '';
   }
 }
