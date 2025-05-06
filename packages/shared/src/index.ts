@@ -1,4 +1,5 @@
 import type { App } from 'vue';
+import 'uno.css';
 
 import * as componentObj from './components';
 

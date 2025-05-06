@@ -7,6 +7,10 @@ const count = ref(0);
 </script>
 
 <template>
+  <div class="i-my-yet-other-icons:vue" style="font-size: 54px"></div>
+  <p class="text-blue-500 p-4" text-blue-500 mt-20px>这是一个有效的 UnoCSS 类。</p>
+  <p class="text-redd-500 p-4px" mt-140px>这是一个无效的 UnoCSS 类。</p>
+  <div class="text-red m-2 p-4 bg-blue">Hello</div>
   <h1>{{ msg }}</h1>
 
   <div class="card">

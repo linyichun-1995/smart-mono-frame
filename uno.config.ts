@@ -3,6 +3,7 @@ import presetAttributify from '@unocss/preset-attributify';
 import { defineConfig } from 'unocss';
 import presetIcons from '@unocss/preset-icons';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
+import path from 'path';
 
 export default defineConfig({
   presets: [
@@ -24,7 +25,9 @@ export default defineConfig({
         },
       },
       collections: {
-        'my-yet-other-icons': FileSystemIconLoader('./src/assets'),
+        'my-yet-other-icons': FileSystemIconLoader(
+          path.resolve(__dirname, './apps/vue-element-plus/src/assets'),
+        ),
       },
     }),
   ],
