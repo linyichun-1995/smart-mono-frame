@@ -34,11 +34,6 @@ export default typescriptEslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       'unocss/order': 'warn',
       'unocss/order-attributify': 'warn',
-      // ...strict
-      //   ? {
-      //       'unocss/blocklist': 'error',
-      //     }
-      //   : {},
       // your rules
     },
   },

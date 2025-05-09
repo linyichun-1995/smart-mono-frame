@@ -7,12 +7,11 @@ const count = ref(0);
 </script>
 
 <template>
-  <div class="i-my-yet-other-icons:vue" style="font-size: 54px"></div>
+  <div class="i-my-yet-other-icons:vue"></div>
   <p class="text-blue-500 p-4" text-blue-500 mt-20px>这是一个有效的 UnoCSS 类。</p>
   <p class="text-redd-500 p-4px" mt-140px>这是一个无效的 UnoCSS 类。</p>
   <div class="text-red m-2 p-4 bg-blue">Hello</div>
   <h1>{{ msg }}</h1>
-
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
@@ -20,7 +19,6 @@ const count = ref(0);
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
   </div>
-
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the
